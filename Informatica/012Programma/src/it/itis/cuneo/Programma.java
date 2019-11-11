@@ -2,6 +2,10 @@ package it.itis.cuneo;
 
 import com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Programma {
     private String denominazione;
     private String produttore;
@@ -49,6 +53,10 @@ public class Programma {
         return anno;
     }
 
+    public Programma(){
+
+    }
+
     public Programma(String denominazione, String produttore, String versione, String sistemaOperativo, String anno){
         setDenominazione(denominazione);
         setProduttore(produttore);
@@ -93,7 +101,7 @@ public class Programma {
         return output;
     }
 
-    public String toString2(ContenitoreDiProgrammi contenitoreDiProgrammi){
+    /*public String toString2(ContenitoreDiProgrammi contenitoreDiProgrammi){
 
         return "Programma1 {\"Nome del programma\": " + contenitoreDiProgrammi.getProgramma1().getDenominazione() + " \"produttore\": " + contenitoreDiProgrammi.getProgramma1().getProduttore() +
                 " \"versione\": " + contenitoreDiProgrammi.getProgramma1().getVersione() + " \"sistema operativo\": " + contenitoreDiProgrammi.getProgramma1().getSistemaOperativo() +
@@ -105,8 +113,8 @@ public class Programma {
 
                 "\nProgramma3 {\"Nome del programma\": " + contenitoreDiProgrammi.getProgramma3().getDenominazione() + " \"produttore\": " + contenitoreDiProgrammi.getProgramma3().getProduttore()
                 + " \"versione\": " + contenitoreDiProgrammi.getProgramma3().getVersione() + " \"sistema operativo\": " + contenitoreDiProgrammi.getProgramma3().getSistemaOperativo() +
-                " \"anno di rilascio\": " + contenitoreDiProgrammi.getProgramma3().getAnno() + "}";
-    }
+                " \"anno di rilascio\": " + contenitoreDiProgrammi.getProgramma3().getAnno() + "}";*/
+
 
     public static void main(String[] args) {
         Programma programmaUno = new Programma("A", "M", "1.0.11", "5S", "2000");

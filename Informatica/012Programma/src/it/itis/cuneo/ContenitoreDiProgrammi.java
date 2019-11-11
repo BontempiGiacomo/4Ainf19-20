@@ -1,59 +1,136 @@
 package it.itis.cuneo;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.ParseException;
+import java.util.Scanner;
+import java.util.Vector;
+
 public class ContenitoreDiProgrammi {
 
-    private Programma programma1;
-    private Programma programma2;
-    private Programma programma3;
+    public static final int NUMERO_MAX=1;
+    public static final int PROGRAMMA_NON_PRESENTE = -1;
+    private Programma[] vet;
+    private Programma programma;
+    private static int cntProgr;
 
-    public void setProgramma1(Programma programma1){
-        this.programma1 = new Programma(programma1);
+
+    public void setProgramma(Programma programma){
+        this.programma = new Programma(programma);
     }
 
-    public Programma getProgramma1() {
-        return this.programma1;
+    public Programma getProgramma() {
+        return this.programma;
     }
 
-    public void setProgramma2(Programma programma2) {
-        this.programma2 = new Programma(programma2);
+    public static void caricaVettoreDenominazione(Programma[] vet, int cntProgr) throws Exception{
+            System.out.println("Inserire la denominazione: ");
+            vet[cntProgr].setDenominazione(Input.readLine());
+    }
+    public static void caricaVettoreProduttore(Programma[] vet, int cntProgr) throws Exception{
+          System.out.println("Inserire il nome del produttore: ");
+            vet[cntProgr].setProduttore(Input.readLine());
+    }
+    public static void caricaVettoreVersione(Programma[] vet, int cntProgr) throws Exception{
+            System.out.println("Inserire la versione: ");
+            vet[cntProgr].setVersione(Input.readLine());
+    }
+    public static void caricaVettoreSO(Programma[] vet, int cntProgr) throws Exception{
+            System.out.println("Inserire il sistema operativo supportato dal programma: ");
+            vet[cntProgr].setSistemaOperativo(Input.readLine());
+    }
+    public static void caricaVettoreAnno(Programma[] vet, int cntProgr) throws Exception{
+            System.out.println("Inserire l'anno di pubblicazione: ");
+            vet[cntProgr].setAnno(Input.readLine());
     }
 
-    public Programma getProgramma2() {
-        return programma2;
+    public static void killProgramma(Programma[] vet){
+        System.out.println("Inserire la posizione del programma da eliminare: ");
+        int numero = Input.readInt();
+        vet[numero] = null;
     }
 
-    public void setProgramma3(Programma programma3) {
-        this.programma3 = new Programma(programma3);
+    public int getN(){
+        int i=0, conta=0;
+        for(; i<NUMERO_MAX; i++){
+            if(vet[i] != null){
+                conta++;
+            }
+        }
+        return conta;
     }
 
-    public Programma getProgramma3() {
-        return programma3;
+    public int cercaProgrammaPerDenominazione(Programma[] vet, String nome){
+        int posizione = 0;
+        boolean trovato = false;
+        for(; (posizione<NUMERO_MAX) && (trovato == false); posizione++){
+            if(vet[posizione].getDenominazione().equals(nome)){
+                trovato = true;
+            }
+        }
+        if(trovato) {
+
+            return posizione;
+        }
+        else {
+            return -1;
+        }
     }
 
+    public String toString(int n){
 
-    public ContenitoreDiProgrammi(Programma programma1, Programma programma2, Programma programma3){
-        setProgramma1(programma1);
-        setProgramma2(programma2);
-        setProgramma3(programma3);
+        return "ContenitoreDiProgrammi{ \"Denominazione programma:\" " + n + this.vet[n].getDenominazione();
+
     }
-
-    public ContenitoreDiProgrammi(ContenitoreDiProgrammi contenitore){
-        setProgramma1(contenitore.getProgramma1());
-        setProgramma2(contenitore.getProgramma2());
-        setProgramma3(contenitore.getProgramma3());
-    }
-
-
 
     public static void main(String[] args) {
-        Programma programma1 = new Programma("A", "M", "1.0.11", "5S", "2000");
-        Programma programma2 = new Programma("B", "J", "1.2.47", "2124E", "2000");
-        Programma programma3 = new Programma("A", "M", "1.0.11", "5S", "2000");
+        Programma vet[] = new Programma[NUMERO_MAX];
+        for(cntProgr = 0; cntProgr<NUMERO_MAX; cntProgr++){
+            try {
+                caricaVettoreDenominazione(vet, cntProgr);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            try {
+                caricaVettoreProduttore(vet, cntProgr);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            try {
+                caricaVettoreVersione(vet, cntProgr);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            try {
+                caricaVettoreSO(vet, cntProgr);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            try {
+                caricaVettoreAnno(vet, cntProgr);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
-        ContenitoreDiProgrammi contenitoreDiProgrammi = new ContenitoreDiProgrammi(programma1, programma2, programma3);
+        killProgramma(vet);
 
-        System.out.println(programma1.toString2(contenitoreDiProgrammi));
+        ContenitoreDiProgrammi contenitore = new ContenitoreDiProgrammi();
+        System.out.println("Il contenitore contiene: " + contenitore.getN());
+
+        System.out.print("\nInserire il nome da cercare: ");
+        String nome = Input.readLine();
+        contenitore.cercaProgrammaPerDenominazione(vet, nome);
+
+        int n=0;
+        for(; n<NUMERO_MAX; n++){
+            contenitore.toString(n);
+        }
 
     }
+
+
+
 
 }
