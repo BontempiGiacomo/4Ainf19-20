@@ -7,9 +7,9 @@ public class Cd {
     private String titolo;
     private String autore;
     private int numeroBrani;
-    private int durata;
+    private String durata;
 
-    public Cd(String titolo, String autore, int numeroBrani, int durata){
+    public Cd(String titolo, String autore, int numeroBrani, String durata){
         setTitolo(titolo);
         setAutore(autore);
         setNumeroBrani(numeroBrani);
@@ -47,11 +47,11 @@ public class Cd {
         return numeroBrani;
     }
 
-    public void setDurata(int durata){
+    public void setDurata(String durata){
         this.durata = durata;
     }
 
-    public int getDurata(){
+    public String getDurata(){
         return durata;
     }
 
@@ -61,16 +61,16 @@ public class Cd {
 
     public boolean compareDurata(Cd cd){
         boolean correct = false;
-        if(this.durata == cd.getDurata()){
+        if(this.durata.equals(cd.getDurata())){
             correct = true;
         }
         return correct;
     }
 
     public static void main(String[] args){
-        Cd cdUno = new Cd("Un tizio", "Tizio", 15, 150);
-        Cd cdDue = new Cd("una tizia", "Tizia", 47, 150);
-        Cd cdTre = new Cd("Un tasso", "Tazio", 32, 1490);
+        Cd cdUno = new Cd("Un tizio", "Tizio", 15, "3:20");
+        Cd cdDue = new Cd("una tizia", "Tizia", 47, "1:12");
+        Cd cdTre = new Cd("Un tasso", "Tazio", 32, "10:15");
 
         System.out.println(cdUno.toString());
         System.out.println(cdDue.toString());
