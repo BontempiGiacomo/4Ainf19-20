@@ -2,6 +2,9 @@ package it.itis.cuneo;
 
 import javafx.collections.ObservableArray;
 
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Arrays;
 
 public class Porto {
@@ -116,4 +119,11 @@ public class Porto {
                 "vetBarca=" + Arrays.toString(vetBarca) +
                 '}';
     }
+
+    /*Ripristino da file*/
+
+    public void salvaVolumi() throws java.io.IOException{
+        TextFile out
+    }
+
 }
