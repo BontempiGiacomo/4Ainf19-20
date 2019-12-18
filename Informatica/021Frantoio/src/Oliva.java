@@ -7,7 +7,7 @@ public class Oliva {
     private String codiceOliva;
     private ColoreOliva coloreOliva;
     private MaturazioneOliva maturazioneOliva;
-    private Calendar dataScadenza;
+    private Calendar dataRaccolta;
 
     public Oliva() {
     }
@@ -17,39 +17,32 @@ public class Oliva {
         this.codiceOliva = codiceOliva;
         this.coloreOliva = coloreOliva;
         this.maturazioneOliva = maturazioneOliva;
-        this.dataScadenza = dataScadenza;
+        this.dataRaccolta = dataScadenza;
     }
 
     public String getCodiceOliva() {
         return codiceOliva;
     }
-
     public void setCodiceOliva(String codiceOliva) {
         this.codiceOliva = codiceOliva;
     }
-
-    public Calendar getDataScadenza() {
-        return dataScadenza;
-    }
-
-    public void setDataScadenza(Calendar dataScadenza) {
-        this.dataScadenza = dataScadenza;
-    }
-
     public ColoreOliva getColoreOliva() {
         return coloreOliva;
     }
-
     public void setColoreOliva(ColoreOliva coloreOliva) {
         this.coloreOliva = coloreOliva;
     }
-
     public MaturazioneOliva getMaturazioneOliva() {
         return maturazioneOliva;
     }
-
     public void setMaturazioneOliva(MaturazioneOliva maturazioneOliva) {
         this.maturazioneOliva = maturazioneOliva;
+    }
+    public Calendar getDataScadenza() {
+        return dataRaccolta;
+    }
+    public void setDataScadenza(Calendar dataScadenza) {
+        this.dataRaccolta = dataScadenza;
     }
 
     @Override
@@ -58,7 +51,7 @@ public class Oliva {
                 "codiceOliva='" + codiceOliva + '\'' +
                 ", coloreOliva=" + coloreOliva +
                 ", maturazioneOliva=" + maturazioneOliva +
-                ", dataScadenza=" + dataScadenza +
+                ", dataScadenza=" + dataRaccolta +
                 '}';
     }
 }
