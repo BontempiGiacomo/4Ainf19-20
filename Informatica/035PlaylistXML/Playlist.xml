@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playlist>
+    <Brano durataSec="150" nomeArtista="A" nomeBrano="A.1"/>
+    <Brano durataSec="123" nomeArtista="B" nomeBrano="B.2"/>
+    <Brano durataSec="64" nomeArtista="C" nomeBrano="C.3"/>
+</playlist>
