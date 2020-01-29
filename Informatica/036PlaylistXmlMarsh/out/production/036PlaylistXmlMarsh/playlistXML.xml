@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playlist>
+    <branoList nomeBrano="Ful">
+        <durata>100</durata>
+        <nomeAutore>AA</nomeAutore>
+    </branoList>
+    <branoList nomeBrano="Gre">
+        <durata>400</durata>
+        <nomeAutore>BB</nomeAutore>
+    </branoList>
+    <branoList nomeBrano="Vio">
+        <durata>800</durata>
+        <nomeAutore>CC</nomeAutore>
+    </branoList>
+    <branoList nomeBrano="Yel">
+        <durata>1400</durata>
+        <nomeAutore>DD</nomeAutore>
+    </branoList>
+    <branoList nomeBrano="Red">
+        <durata>85</durata>
+        <nomeAutore>JJ</nomeAutore>
+    </branoList>
+</playlist>
