@@ -1,0 +1,23 @@
+<portabicicletta>
+	<biciclettaList>
+		<cambio>SRAM</cambio>
+		<freni>Shimano</freni>
+		<ruotaAnteriore>Schwalbe</ruotaAnteriore>
+		<ruotaPosteriore>Schwalbe</ruotaPosteriore>
+		<telaio>Ritchey</telaio>
+	</biciclettaList>
+	<biciclettaList>
+		<cambio>ROTOR</cambio>
+		<freni>Avid </freni>
+		<ruotaAnteriore>Continental</ruotaAnteriore>
+		<ruotaPosteriore>Continental</ruotaPosteriore>
+		<telaio>Surly</telaio>
+	</biciclettaList>
+	<biciclettaList>
+		<cambio>Campagnolo</cambio>
+		<freni>Campagnolo</freni>
+		<ruotaAnteriore>Kenda</ruotaAnteriore>
+		<ruotaPosteriore>Kenda</ruotaPosteriore>
+		<telaio>Saracen</telaio>
+	</biciclettaList>
+</portabicicletta>
