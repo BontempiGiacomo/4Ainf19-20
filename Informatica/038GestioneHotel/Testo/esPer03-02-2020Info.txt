@@ -1,0 +1,7 @@
+<hotel>
+	<camera nome = "">
+		<letto> 2 </letto>
+		<bagno> si </bagno>
+		<vista> mare </vista>
+	</camera>
+</hotel>

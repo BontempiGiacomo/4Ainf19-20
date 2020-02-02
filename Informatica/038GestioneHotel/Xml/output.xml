@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hotel>
+    <cameraList nome="0">
+        <bagno>true</bagno>
+        <letto>4</letto>
+        <vista>montagna</vista>
+    </cameraList>
+    <cameraList nome="1">
+        <bagno>false</bagno>
+        <letto>2</letto>
+        <vista>mare</vista>
+    </cameraList>
+    <cameraList nome="2">
+        <bagno>false</bagno>
+        <letto>84</letto>
+        <vista>niente</vista>
+    </cameraList>
+</hotel>
