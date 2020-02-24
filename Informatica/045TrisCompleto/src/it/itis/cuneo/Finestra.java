@@ -368,10 +368,10 @@ public class Finestra extends JFrame implements ActionListener {
             File file = new File(PATH_FILE);
             writer = new BufferedWriter(new FileWriter(file));
             for (int i=0; i<MAX_CELLE; i++){
-                writer.write("\n");
                 for (int j=0; j<MAX_CELLE; j++){
                     writer.write(this.toRowFile(i, j));
                 }
+                writer.write("\n");
             }
         } catch (IOException e) {
             e.printStackTrace();
