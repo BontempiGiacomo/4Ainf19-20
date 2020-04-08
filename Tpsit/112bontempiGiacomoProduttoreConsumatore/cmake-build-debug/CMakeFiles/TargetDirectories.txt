@@ -1,0 +1,3 @@
+/mnt/c/Users/ASUS/CLionProjects/bontempiGiacomoProduttoreConsumatore/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/ASUS/CLionProjects/bontempiGiacomoProduttoreConsumatore/cmake-build-debug/CMakeFiles/bontempiGiacomoProduttoreConsumatore.dir
+/mnt/c/Users/ASUS/CLionProjects/bontempiGiacomoProduttoreConsumatore/cmake-build-debug/CMakeFiles/edit_cache.dir
